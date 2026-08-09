@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Interview Assistant</title>
+  <link rel="stylesheet" href="overlay.css" />
+</head>
+<body>
+  <div class="panel">
+    <div class="header" id="dragHeader">
+      <span class="title">Interview Assistant</span>
+      <div class="header-actions">
+        <button id="settingsBtn" title="Settings">&#9881;</button>
+        <button id="hideBtn" title="Hide">&#8211;</button>
+        <button id="quitBtn" title="Quit">&#10005;</button>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mic-status" id="micStatus">&#127908; starting...</span>
+      <span class="docs-status" id="docsStatus"></span>
+    </div>
+
+    <div class="body">
+      <div class="section-label">Question</div>
+      <div class="transcript" id="transcript">Listening for the next question...</div>
+
+      <div class="section-label">Answer</div>
+      <div class="answer" id="answer"></div>
+    </div>
+
+    <div class="manual-input">
+      <input id="manualInput" type="text" placeholder="Type a question manually..." />
+      <button id="manualSend">Ask</button>
+    </div>
+  </div>
+
+  <script src="overlay.js"></script>
+</body>
+</html>

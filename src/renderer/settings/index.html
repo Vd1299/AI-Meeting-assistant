@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Interview Assistant - Settings</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <h1>Settings</h1>
+
+  <label>
+    Deepgram API key
+    <input id="deepgramApiKey" type="password" placeholder="dg_..." />
+  </label>
+
+  <label>
+    OpenAI API key
+    <input id="openaiApiKey" type="password" placeholder="sk-..." />
+  </label>
+
+  <label>
+    Chat model
+    <select id="chatModel">
+      <option value="gpt-4o-mini">gpt-4o-mini (fastest)</option>
+      <option value="gpt-4o">gpt-4o (higher quality)</option>
+    </select>
+  </label>
+
+  <label>
+    Resume / docs folder
+    <div class="row">
+      <input id="docFolder" type="text" readonly placeholder="No folder selected" />
+      <button id="browseBtn">Browse...</button>
+    </div>
+  </label>
+
+  <div class="actions">
+    <button id="saveBtn" class="primary">Save</button>
+    <button id="reingestBtn">Re-index documents</button>
+  </div>
+
+  <div id="statusMsg" class="status"></div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

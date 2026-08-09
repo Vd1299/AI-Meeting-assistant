@@ -1,0 +1,24 @@
+{
+  "name": "ai-interview-assistant",
+  "version": "0.1.0",
+  "description": "Real-time interview assistant overlay: live transcription + RAG-grounded answer generation.",
+  "main": "dist/main/main.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.renderer.json && node scripts/copy-static.js",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron . --dev"
+  },
+  "dependencies": {
+    "@deepgram/sdk": "^3.9.0",
+    "electron-store": "^8.2.0",
+    "mammoth": "^1.8.0",
+    "openai": "^4.63.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.50",
+    "electron": "^31.3.1",
+    "typescript": "^5.5.4"
+  }
+}
